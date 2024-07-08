@@ -1,0 +1,30 @@
+{
+    "files.associations": {
+        "syscall.h": "c",
+        "thread.h": "c",
+        "mmu.h": "c",
+        "process.h": "c",
+        "*.inc": "c",
+        "file.h": "c",
+        "vm.h": "c",
+        "hash.h": "c",
+        "malloc.h": "c",
+        "uninit.h": "c",
+        "palloc.h": "c",
+        "synch.h": "c",
+        "anon.h": "c",
+        "lib.h": "c",
+        "stddef.h": "c",
+        "syscall-nr.h": "c",
+        "filesys.h": "c",
+        "arc4.h": "c",
+        "string_view": "c",
+        "disk.h": "c",
+        "bitmap.h": "c",
+        "inspect.h": "c",
+        "stdbool.h": "c",
+        "vaddr.h": "c",
+        "pte.h": "c",
+        "inttypes.h": "c"
+    }
+}

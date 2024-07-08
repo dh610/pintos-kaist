@@ -1,0 +1,23 @@
+FAIL
+Kernel panic in run: PANIC at ../../filesys/inode.c:304 in inode_allow_write(): assertion `inode->deny_write_cnt > 0' failed.
+Call stack: 0x8004218b62 0x80042212e9 0x800422002e 0x800421fdad 0x800421cb3c 0x800421cad1 0x800420724e 0x800421e1a2 0x800421dbb2 0x8004208fbc 0x8004209414 0x800421cb55 0x800421c8c1 0x800421e208 0x800421dddf 0x800421dc27 0x401192 0x401dc1 0x401e11
+Translation of call stack:
+0x0000008004218b62: debug_panic (lib/kernel/debug.c:32)
+0x00000080042212e9: inode_allow_write (filesys/inode.c:305)
+0x000000800422002e: file_allow_write (filesys/file.c:137)
+0x000000800421fdad: file_close (filesys/file.c:56)
+0x000000800421cb3c: process_cleanup (userprog/process.c:279)
+0x000000800421cad1: process_exit (userprog/process.c:268)
+0x000000800420724e: thread_exit (threads/thread.c:296)
+0x000000800421e1a2: fork (userprog/syscall.c:171)
+0x000000800421dbb2: page_fault (userprog/exception.c:147)
+0x0000008004208fbc: intr_handler (threads/interrupt.c:352)
+0x0000008004209414: intr_entry (intr-stubs.o:?)
+0x000000800421cb55: process_cleanup (userprog/process.c:285)
+0x000000800421c8c1: process_exec (userprog/process.c:202)
+0x000000800421e208: exec (userprog/syscall.c:179)
+0x000000800421dddf: syscall_handler (userprog/syscall.c:88)
+0x000000800421dc27: no_sti (syscall-entry.o:?)
+0x0000000000401192: (unknown)
+0x0000000000401dc1: (unknown)
+0x0000000000401e11: (unknown)
